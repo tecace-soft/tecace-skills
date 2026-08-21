@@ -1,0 +1,16 @@
+{
+  "name": "tecace",
+  "description": "TecAce 사내 스킬 마켓플레이스",
+  "owner": {
+    "name": "TecAce Software",
+    "email": "johnson.tecace@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "tecace-design",
+      "source": "./plugins/tecace-design",
+      "description": "TecAce 브랜드 디자인/UI 스킬 모음",
+      "category": "design"
+    }
+  ]
+}
