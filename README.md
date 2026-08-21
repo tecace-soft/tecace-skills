@@ -15,6 +15,16 @@ plugins/tecace-design/skills/tecace-dashboard-ui/references/
 plugins/tecace-design/skills/tecace-dashboard-ui/templates/
 ```
 
+## 사전 준비 (private 레포이므로 필수)
+
+이 레포는 private입니다. claude.ai 웹 / Desktop / Cowork에서 붙이려면 **Claude GitHub App이 tecace-soft 조직과 이 레포에 접근 권한을 가지고 있어야** 합니다. 권한이 없으면 Sync 시 아래 메시지가 나옵니다.
+
+Repository not accessible. If it's private, the Claude GitHub App needs access to this repository.
+
+그 화면의 Install the Claude GitHub App 버튼을 눌러 조직과 레포를 선택하면 됩니다. 조직 owner 승인이 필요할 수 있습니다.
+
+Claude Code(CLI)는 사용자의 기존 git 자격증명을 쓰기 때문에 이 절차가 필요 없습니다.
+
 ## 설치 (팀원용)
 
 **Claude Code**
@@ -26,7 +36,9 @@ plugins/tecace-design/skills/tecace-dashboard-ui/templates/
 
 **claude.ai 웹 / Desktop / Cowork**
 
-Customize → Plugins 탭 → Personal plugins의 + 버튼 → Add marketplace → Add from a repository → tecace-soft/tecace-skills
+Customize → Plugins 탭 → 오른쪽 Add 버튼 → Add marketplace → Add from a repository → tecace-soft/tecace-skills 입력 → Sync
+
+Sync automatically 토글은 켜둔 채로 두십시오.
 
 ## 업데이트
 
@@ -38,16 +50,18 @@ git add . && git commit -m "수정 내용" && git push
 
 또는 GitHub 웹에서 파일을 열고 연필 아이콘으로 바로 수정해도 됩니다.
 
-팀원:
+**팀원 — claude.ai 웹 / Desktop / Cowork**
+
+따로 할 것이 없습니다. 마켓플레이스를 추가할 때 Sync automatically를 켜두면 레포가 바뀌면 자동으로 따라옵니다. 다만 반영까지 얼마나 걸리는지는 명시되어 있지 않으니, 급한 변경은 플러그인 화면에서 수동으로 한 번 갱신해 주십시오.
+
+**팀원 — Claude Code(CLI)**
 
 ```
 /plugin marketplace update tecace
 /plugin update tecace-design@tecace
 ```
 
-두 줄 모두 필요합니다. 첫 줄만 하면 카탈로그만 갱신되고 설치본은 그대로입니다. 적용하려면 Claude Code 재시작이 필요합니다. 웹과 Cowork은 플러그인 화면에서 갱신합니다.
-
-자동 반영은 아닙니다. 팀원이 한 번은 눌러야 합니다.
+두 줄 모두 필요합니다. 첫 줄만 하면 카탈로그만 갱신되고 설치본은 그대로입니다. 적용하려면 Claude Code 재시작이 필요합니다. CLI는 자동 반영이 아닙니다.
 
 ## version을 두지 않는 이유
 
@@ -59,6 +73,6 @@ plugin.json에 version이 없으면 커밋 SHA가 버전 역할을 합니다. �
 
 ## 스킬 추가하기
 
-1. plugins/tecace-design/skills/ 아래에 스킬 폴더를 통째로 넣습니다.
-2. 별개 주제라면 plugins/ 아래에 새 플러그인 폴더를 만들고 marketplace.json의 plugins 배열에 추가합니다.
-3. claude plugin validate . 로 확인 후 push합니다.
+(1) plugins/tecace-design/skills/ 아래에 스킬 폴더를 통째로 넣습니다.
+(2) 별개 주제라면 plugins/ 아래에 새 플러그인 폴더를 만들고 marketplace.json의 plugins 배열에 추가합니다.
+(3) claude plugin validate . 로 확인 후 push합니다.
