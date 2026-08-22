@@ -5,7 +5,7 @@ description: >
   CSV 형식의 Q&A 분석 데이터를 입력받아 정량 분석을 수행하고,
   특정 브랜드의 AI 검색 엔진 가시성을 평가하는 컨설팅 수준의 Word(.docx) 리포트를 작성한다.
   삼성, LG, Apple, Google, Sony 등 어떤 브랜드든 타겟으로 분석 가능하며,
-  CSV의 Target Brand 컴럼을 기반으로 타겟 브랜드를 자동 감지한다.
+  CSV의 Target Brand 컬럼을 기반으로 타겟 브랜드를 자동 감지한다.
   이 스킬은 사용자가 GEO 리포트, 브랜드 가시성 분석, AI 답변 분석,
   ChatGPT 브랜딩 분석, SoV 분석, 감성 분석 리포트 등을 요청할 때 반드시 사용한다.
   CSV 파일이 업로드되고 "리포트", "분석", "GEO", "SoV", "브랜드 가시성" 등의
@@ -20,8 +20,8 @@ description: >
 ChatGPT 등 생성형 AI가 사용자 질문에 대해 타겟 브랜드를 얼마나 빈번하고, 긍정적이며,
 정확하게 인용하는지를 분석하여 컨설팅 수준의 Word(.docx) 리포트를 산출한다.
 
-**브랜드 범용성**: Samsung, LG, Apple, Google, Sony 등 어떤 브랜드든 타겟으로 분석 가능하다.
-CSV의 `Target Brand Mentions` 컴럼을 기반으로 타겟 브랜드를 자동 감지하거나,
+**브랜드 범용성**: Samsung, LG, Apple, Google, Sony 등 어떤 브랜드든 타겟으로 분석 가능한다.
+CSV의 `Target Brand Mentions` 컬럼을 기반으로 타겟 브랜드를 자동 감지하거나,
 사용자가 명시적으로 지정할 수 있다.
 
 ## 워크플로우
@@ -94,7 +94,7 @@ Claude의 docx 스킬(`/mnt/skills/public/docx/SKILL.md`)의 기술 가이드를
 
 ### 필수
 - **CSV 파일**: GEO 분석 데이터 (포맷 고정)
-  - 필수 컴럼: Query ID, Query Text, Answer Text, Category, Type, Tags, Persona,
+  - 필수 컬럼: Query ID, Query Text, Answer Text, Category, Type, Tags, Persona,
     Target Brand Mentions(Count), Target Brand Mentions(Position),
     Total Mentions(All Brands), Sentiment(Category), Sentiment(Score),
     Reference, Competitor(Brand)
@@ -155,7 +155,7 @@ v3까지 있던 Samsung, Apple, LG 등의 하드코딩된 제품 키워드/도�
 - **브랜드 키워드**: Answer Text에서 `[브랜드명] + [대문자 시작 단어]` 패턴으로 제품명 자동 추출
   (2회 이상 등장한 것만 채택)
 - **공식 도메인**: Reference URL에서 브랜드명이 포함된 도메인 자동 추출
-- **경쟁사 도메인**: Competitor 컴럼의 브랜드명으로 Reference에서 경쟁사 도메인 자동 매핑
+- **경쟁사 도메인**: Competitor 컬럼의 브랜드명으로 Reference에서 경쟁사 도메인 자동 매핑
 
 ### Reference 도메인 분류
 - `owned_target`: 타겟 브랜드의 공식 도메인
@@ -177,6 +177,6 @@ v3까지 있던 Samsung, Apple, LG 등의 하드코딩된 제품 키워드/도�
 - Accuracy Proxy: Answer Text에서 타겟 브랜드 제품의 모델명/스펙이 정확한지 검증한다.
 - Misconception Patterns: AI가 타겟 브랜드에 대해 반복적으로 보이는 오인식을 식별한다.
 - 대립적 테제: Executive Summary에서 긍정/부정 양면을 대조하는 서술 구조를 사용한다.
-- 각 섹션의 테이블 형식은 `references/report_structure.md`의 컴럼 정의를 정확히 따른다.
+- 각 섹션의 테이블 형식은 `references/report_structure.md`의 컬럼 정의를 정확히 따른다.
 - Persona는 `by_persona_group`의 그룹핑된 결과를 사용한다.
 - SoV 테이블에서 경쟁사별 수치는 추정치이므로 "약 X%" 또는 "추정 X%"로 표현한다.
