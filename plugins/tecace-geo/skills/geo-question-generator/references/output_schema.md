@@ -30,7 +30,7 @@ Generate to JSON first, validate, then convert. One object per question:
     "question": "50만 원 이하에서 가성비가 가장 좋은 무선 이어폰은 무엇인가요?",
     "category": "무선 이어폰",
     "type": "Pricing",
-    "tags": "가성비, 노이즈캔슐링",
+    "tags": "가성비, 노이즈캔슬링",
     "persona": "첫 무선 이어폰을 사는 대학생"
   }
 ]
