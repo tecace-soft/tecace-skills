@@ -20,7 +20,7 @@ description: >
 ChatGPT 등 생성형 AI가 사용자 질문에 대해 타겟 브랜드를 얼마나 빈번하고, 긍정적이며,
 정확하게 인용하는지를 분석하여 컨설팅 수준의 Word(.docx) 리포트를 산출한다.
 
-**브랜드 범용성**: Samsung, LG, Apple, Google, Sony 등 어떤 브랜드든 타겟으로 분석 가능한다.
+**브랜드 범용성**: Samsung, LG, Apple, Google, Sony 등 어떤 브랜드든 타겟으로 분석 가능하다.
 CSV의 `Target Brand Mentions` 컬럼을 기반으로 타겟 브랜드를 자동 감지하거나,
 사용자가 명시적으로 지정할 수 있다.
 
