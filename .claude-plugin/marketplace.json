@@ -11,6 +11,12 @@
       "source": "./plugins/tecace-design",
       "description": "TecAce 브랜드 디자인/UI 스킬 모음",
       "category": "design"
+    },
+    {
+      "name": "tecace-geo",
+      "source": "./plugins/tecace-geo",
+      "description": "TecAce GEO 분석 스킬 모음 — 질문 생성부터 리포트까지",
+      "category": "analysis"
     }
   ]
 }
