@@ -37,7 +37,7 @@ The product/domain grouping a question belongs to (스마트폰, TV, 무선 이�
 
 ## 3. Personas
 
-Written as age / profession / intent, not a demographic label. "출장이 짦은 영업직",
+Written as age / profession / intent, not a demographic label. "출장이 잦은 영업직",
 "첫 자취를 시작한 사회초년생", "영상 편집 프리랜서".
 
 Generate as each persona in turn. This is what makes questions read like real searches
@@ -87,7 +87,7 @@ Run on **every** question. Any failure → rewrite and re-check.
 
 - **Too generic** — "좋은 스마트폰은 어떻게 고르나요?" produces advice, not names. Add a
   constraint (price, use case, criterion) that forces a pick.
-- **Brand-shaped** — "갤럭시와 아이폰 중 어느 쪽이 난가요?" is a leak even as a comparison.
+- **Brand-shaped** — "갤럭시와 아이폰 중 어느 쪽이 낫나요?" is a leak even as a comparison.
   Rewrite to the criterion: "카메라 성능만 놓고 볼 때 상위권 스마트폰은 무엇인가요?"
 - **Two questions in one** — split them; one row measures one thing.
 - **Category drift** — a "무선 이어폰" question that is really about phone pairing belongs
